@@ -13,4 +13,52 @@
     #mensaje {
       display: none;
       margin-top: 30px;
-      animati
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .gif {
+      width: 300px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gif:hover {
+      transform: scale(1.05);
+    }
+    .texto {
+      margin: 20px auto;
+      max-width: 500px;
+      font-size: 18px;
+      background-color: #fff0f5;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <h2>💌 Tienes un mensaje</h2>
+  <img class="gif" id="gifInicio" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2tyZWM0cW00Y3F2eHJ2YjFzdW4zbzh0dG9sZHM1eXZkeXZybXljYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qrU5NW46OsG3u/giphy.gif" alt="Mensaje" onclick="mostrarMensaje()">
+
+  <div id="mensaje">
+    <img class="gif" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnNobWY5NnlyN3AzYTJvOG1wdzQ3MGNieDA0MnRrdTJsZHBjZThwaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5nHgjRkeLr0C5Axnig/giphy.gif" alt="Retiro">
+    <div class="texto">
+      <p>Hola, linda 💖</p>
+      <p>Este mensaje es muy especial. Hoy vas a retiro, no te veré por dos largos días, pero sé que la experiencia que vas a obtener en este viaje será de provecho y bendición.</p>
+      <p>Cuídate preciosa, feliz retiro ✨</p>
+    </div>
+  </div>
+
+  <script>
+  function mostrarMensaje() {
+      document.getElementById('gifInicio').style.display = 'none';
+      document.getElementById('mensaje').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
